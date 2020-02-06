@@ -16,9 +16,9 @@ class AddTodo extends Component {
   };
   render() {
     return (
-      <View>
-        <TextInput onChangeText={this.onChangeText} />
-        <Button title="추가" onPress={this._onPressButton} />
+      <View styles={{flex: 1}}>
+        <TextInput onChangeText={this.onChangeText} testID="textInput" />
+        <Button title="추가" onPress={this._onPressButton} testID="addButton" />
       </View>
     );
   }

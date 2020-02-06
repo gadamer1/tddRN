@@ -16,10 +16,22 @@ class TodoItem extends Component {
     const {item} = this.props;
 
     return (
-      <View style={item.completed ? styles.completed : styles.default}>
-        <Text></Text>
-        <Button title="complete" onPress={this._onPressCompleteButton} />
-        <Button title="delete" onPress={this._onPressDeleteButton} />
+      <View
+        testId="todoItem"
+        style={item.completed ? styles.completed : styles.default}>
+        <Text testID={item.completed ? 'completed' : 'unCompleted'}>
+          {item.text}
+        </Text>
+        <Button
+          testID="completeButton"
+          title="complete"
+          onPress={this._onPressCompleteButton}
+        />
+        <Button
+          testID="deleteButton"
+          title="delete"
+          onPress={this._onPressDeleteButton}
+        />
       </View>
     );
   }
